@@ -147,8 +147,8 @@ uint64_t SPIFram::getUniqueID(void) {
 
    long long _uid = 0;
    for (uint8_t i = 0; i < 8; i++) {
-     _uid += _uniqueID[i];
      _uid = _uid << 8;
+	 _uid += _uniqueID[i];
    }
    return _uid;
 }
